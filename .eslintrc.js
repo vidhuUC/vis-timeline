@@ -12,7 +12,13 @@ module.exports = {
 
   extends: "eslint:recommended",
 
-  ignorePatterns: ["**/*.d.ts"],
+  ignorePatterns: [
+    "dist/**",
+    "peer/**",
+    "**/*.d.ts",
+    "types/**",
+    "node_modules/**"
+  ],
 
   // For the full list of rules, see: http://eslint.org/docs/rules/
   rules: {
