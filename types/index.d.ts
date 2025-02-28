@@ -16,20 +16,27 @@
 //                 Slaven Tomac <https://github.com/slavede>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-import { DataInterface, DataSet, DataView } from 'vis-data';
-export type DataInterfaceDataGroup = DataInterface<DataGroup, 'id'>;
-export type DataInterfaceDataItem = DataInterface<DataItem, 'id'>;
-export type DataSetDataGroup = DataSet<DataGroup, 'id'>;
-export type DataSetDataItem = DataSet<DataItem, 'id'>;
-export type DataViewDataGroup = DataView<DataGroup, 'id'>;
-export type DataViewDataItem = DataView<DataItem, 'id'>;
+import { DataInterface, DataSet, DataView } from "vis-data";
+export type DataInterfaceDataGroup = DataInterface<DataGroup, "id">;
+export type DataInterfaceDataItem = DataInterface<DataItem, "id">;
+export type DataSetDataGroup = DataSet<DataGroup, "id">;
+export type DataSetDataItem = DataSet<DataItem, "id">;
+export type DataViewDataGroup = DataView<DataGroup, "id">;
+export type DataViewDataItem = DataView<DataItem, "id">;
 
-import { MomentInput, MomentFormatSpecification, Moment } from 'moment';
-import { IFilterXSSOptions } from 'xss';
-export type MomentConstructor1 =
-  (inp?: MomentInput, format?: MomentFormatSpecification, strict?: boolean) => Moment;
-export type MomentConstructor2 =
-  (inp?: MomentInput, format?: MomentFormatSpecification, language?: string, strict?: boolean) => Moment;
+import { MomentInput, MomentFormatSpecification, Moment } from "moment";
+import { IFilterXSSOptions } from "xss";
+export type MomentConstructor1 = (
+  inp?: MomentInput,
+  format?: MomentFormatSpecification,
+  strict?: boolean
+) => Moment;
+export type MomentConstructor2 = (
+  inp?: MomentInput,
+  format?: MomentFormatSpecification,
+  language?: string,
+  strict?: boolean
+) => Moment;
 
 export type MomentConstructor = MomentConstructor1 | MomentConstructor2;
 
@@ -37,38 +44,60 @@ export type IdType = string | number;
 export type SubgroupType = IdType;
 export type DateType = Date | number | string;
 export type HeightWidthType = IdType;
-export type TimelineItemType = 'box' | 'point' | 'range' | 'background';
-export type TimelineAlignType = 'auto' | 'center' | 'left' | 'right';
-export type TimelineTimeAxisScaleType = 'millisecond' | 'second' | 'minute' | 'hour' |
-  'weekday' | 'day' | 'week' | 'month' | 'year';
-export type TimelineEventPropertiesResultWhatType = 'item' | 'background' | 'axis' |
-  'group-label' | 'custom-time' | 'current-time';
+export type TimelineItemType = "box" | "point" | "range" | "background";
+export type TimelineAlignType = "auto" | "center" | "left" | "right";
+export type TimelineTimeAxisScaleType =
+  | "millisecond"
+  | "second"
+  | "minute"
+  | "hour"
+  | "weekday"
+  | "day"
+  | "week"
+  | "month"
+  | "year";
+export type TimelineEventPropertiesResultWhatType =
+  | "item"
+  | "background"
+  | "axis"
+  | "group-label"
+  | "custom-time"
+  | "current-time";
 export type TimelineEvents =
-  'currentTimeTick' |
-  'click' |
-  'contextmenu' |
-  'doubleClick' |
-  'drop' |
-  'mouseOver' |
-  'mouseDown' |
-  'mouseUp' |
-  'mouseMove' |
-  'groupDragged' |
-  'changed' |
-  'rangechange' |
-  'rangechanged' |
-  'select' |
-  'itemover' |
-  'itemout' |
-  'timechange' |
-  'timechanged';
-export type Graph2dStyleType = 'line' | 'bar' | 'points';
-export type Graph2dBarChartAlign = 'left' | 'center' | 'right';
-export type Graph2dDrawPointsStyle = 'square' | 'circle';
-export type LegendPositionType = 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
-export type ParametrizationInterpolationType = 'centripetal' | 'chordal' | 'uniform' | 'disabled';
-export type TopBottomEnumType = 'top' | 'bottom';
-export type RightLeftEnumType = 'right' | 'left';
+  | "currentTimeTick"
+  | "click"
+  | "contextmenu"
+  | "doubleClick"
+  | "drop"
+  | "mouseOver"
+  | "mouseDown"
+  | "mouseUp"
+  | "mouseMove"
+  | "groupDragged"
+  | "changed"
+  | "rangechange"
+  | "rangechanged"
+  | "select"
+  | "itemover"
+  | "itemout"
+  | "timechange"
+  | "timechanged"
+  | "zoom";
+export type Graph2dStyleType = "line" | "bar" | "points";
+export type Graph2dBarChartAlign = "left" | "center" | "right";
+export type Graph2dDrawPointsStyle = "square" | "circle";
+export type LegendPositionType =
+  | "top-right"
+  | "top-left"
+  | "bottom-right"
+  | "bottom-left";
+export type ParametrizationInterpolationType =
+  | "centripetal"
+  | "chordal"
+  | "uniform"
+  | "disabled";
+export type TopBottomEnumType = "top" | "bottom";
+export type RightLeftEnumType = "right" | "left";
 
 export interface LegendPositionOptions {
   visible?: boolean;
@@ -144,7 +173,11 @@ export interface TimelineEditableOption {
   overrideItems?: boolean;
 }
 
-export type TimelineFormatLabelsFunction = (date: Date, scale: string, step: number) => string;
+export type TimelineFormatLabelsFunction = (
+  date: Date,
+  scale: string,
+  step: number
+) => string;
 
 export interface TimelineFormatLabelsOption {
   millisecond?: string;
@@ -172,7 +205,7 @@ export interface TimelineGroupEditableOption {
 export interface TimelineHiddenDateOption {
   start: DateType;
   end: DateType;
-  repeat?: 'daily' | 'weekly' | 'monthly' | 'yearly';
+  repeat?: "daily" | "weekly" | "monthly" | "yearly";
 }
 
 export interface TimelineItemsAlwaysDraggableOption {
@@ -209,7 +242,7 @@ export interface TimelineRollingModeOption {
 
 export interface TimelineTooltipOption {
   followMouse?: boolean;
-  overflowMethod?: 'cap' | 'flip' | 'none';
+  overflowMethod?: "cap" | "flip" | "none";
   delay?: number;
   template?: (item: TimelineItem, editedData?: TimelineItem) => string;
 }
@@ -219,25 +252,60 @@ export interface TimelineXSSProtectionOption {
   filterOptions?: IFilterXSSOptions;
 }
 
-export type TimelineOptionsConfigureFunction = (option: string, path: string[]) => boolean;
-export type TimelineOptionsConfigureType = boolean | TimelineOptionsConfigureFunction;
+export type TimelineOptionsConfigureFunction = (
+  option: string,
+  path: string[]
+) => boolean;
+export type TimelineOptionsConfigureType =
+  | boolean
+  | TimelineOptionsConfigureFunction;
 export type TimelineOptionsDataAttributesType = boolean | string | string[];
 export type TimelineOptionsEditableType = boolean | TimelineEditableOption;
-export type TimelineOptionsItemCallbackFunction = (item: TimelineItem, callback: (item: TimelineItem | null) => void) => void;
-export type TimelineOptionsGroupCallbackFunction = (group: TimelineGroup, callback: (group: TimelineGroup | null) => void) => void;
-export type TimelineOptionsGroupEditableType = boolean | TimelineGroupEditableOption;
-export type TimelineOptionsGroupOrderType = string | TimelineOptionsComparisonFunction;
-export type TimelineOptionsGroupOrderSwapFunction = (fromGroup: any, toGroup: any, groups: DataInterfaceDataGroup) => void;
-export type TimelineOptionsHiddenDatesType = TimelineHiddenDateOption | TimelineHiddenDateOption[];
-export type TimelineOptionsItemsAlwaysDraggableType = boolean | TimelineItemsAlwaysDraggableOption;
+export type TimelineOptionsItemCallbackFunction = (
+  item: TimelineItem,
+  callback: (item: TimelineItem | null) => void
+) => void;
+export type TimelineOptionsGroupCallbackFunction = (
+  group: TimelineGroup,
+  callback: (group: TimelineGroup | null) => void
+) => void;
+export type TimelineOptionsGroupEditableType =
+  | boolean
+  | TimelineGroupEditableOption;
+export type TimelineOptionsGroupOrderType =
+  | string
+  | TimelineOptionsComparisonFunction;
+export type TimelineOptionsGroupOrderSwapFunction = (
+  fromGroup: any,
+  toGroup: any,
+  groups: DataInterfaceDataGroup
+) => void;
+export type TimelineOptionsHiddenDatesType =
+  | TimelineHiddenDateOption
+  | TimelineHiddenDateOption[];
+export type TimelineOptionsItemsAlwaysDraggableType =
+  | boolean
+  | TimelineItemsAlwaysDraggableOption;
 export type TimelineOptionsMarginType = number | TimelineMarginOption;
 export type TimelineOptionsOrientationType = string | TimelineOrientationOption;
-export type TimelineOptionsSnapFunction = (date: Date, scale: string, step: number) => Date | number;
+export type TimelineOptionsSnapFunction = (
+  date: Date,
+  scale: string,
+  step: number
+) => Date | number;
 export type TimelineOptionsSnapType = null | TimelineOptionsSnapFunction;
-export type TimelineOptionsTemplateFunction = (item?: any, element?: any, data?: any) => string | HTMLElement;
+export type TimelineOptionsTemplateFunction = (
+  item?: any,
+  element?: any,
+  data?: any
+) => string | HTMLElement;
 export type TimelineOptionsComparisonFunction = (a: any, b: any) => number;
-export type TimelineOptionsGroupHeightModeType = 'auto' | 'fixed' | 'fitItems';
-export type TimelineOptionsClusterCriteriaFunction = (firstItem: TimelineItem, secondItem: TimelineItem) => boolean;
+export type TimelineOptionsGroupHeightModeType = "auto" | "fixed" | "fitItems";
+export type TimelineOptionsClusterCriteriaFunction = (
+  firstItem: TimelineItem,
+  secondItem: TimelineItem
+) => boolean;
+export type TimelineOptionsZoomCallback = (zoomLevel: number) => void;
 export type TimelineOptionsCluster = {
   titleTemplate?: string;
   maxItems?: number;
@@ -245,8 +313,13 @@ export type TimelineOptionsCluster = {
   showStipes?: boolean;
   fitOnDoubleClick?: boolean;
 };
-export type TimelineOptionsEventType = 'box' | 'point' | 'range' | 'background';
-export type TimelineOptionsZoomKey = '' | 'altKey' | 'ctrlKey' | 'shiftKey' | 'metaKey';
+export type TimelineOptionsEventType = "box" | "point" | "range" | "background";
+export type TimelineOptionsZoomKey =
+  | ""
+  | "altKey"
+  | "ctrlKey"
+  | "shiftKey"
+  | "metaKey";
 
 export interface TimelineOptions {
   align?: TimelineAlignType;
@@ -257,6 +330,8 @@ export interface TimelineOptions {
   dataAttributes?: TimelineOptionsDataAttributesType;
   editable?: TimelineOptionsEditableType;
   end?: DateType;
+  mode?: "vertical" | "horizontal";
+  direction?: "vertical" | "horizontal";
   format?: TimelineFormatOption;
   groupEditable?: TimelineOptionsGroupEditableType;
   groupHeightMode?: TimelineOptionsGroupHeightModeType;
@@ -269,7 +344,7 @@ export interface TimelineOptions {
   itemsAlwaysDraggable?: TimelineOptionsItemsAlwaysDraggableType;
   locale?: string;
   locales?: any; // TODO
-  longSelectPressTime?: number,
+  longSelectPressTime?: number;
   moment?: MomentConstructor;
   margin?: TimelineOptionsMarginType;
   max?: DateType;
@@ -290,6 +365,7 @@ export interface TimelineOptions {
   onMoving?: TimelineOptionsItemCallbackFunction;
   onRemove?: TimelineOptionsItemCallbackFunction;
   onRemoveGroup?: TimelineOptionsGroupCallbackFunction;
+  onZoom?: TimelineOptionsZoomCallback;
   order?: TimelineOptionsComparisonFunction;
   orientation?: TimelineOptionsOrientationType;
   preferZoom?: boolean;
@@ -520,7 +596,7 @@ export class Graph2d {
   getItemRange(): any; // TODO
   getSelection(): IdType[];
   getVisibleItems(): IdType[];
-  getWindow(): { start: Date, end: Date };
+  getWindow(): { start: Date; end: Date };
   moveTo(time: DateType, options?: TimelineAnimationOptions): void;
   on(event: TimelineEvents, callback: () => void): void;
   off(event: TimelineEvents, callback: () => void): void;
@@ -529,12 +605,19 @@ export class Graph2d {
   setCurrentTime(time: DateType): void;
   setCustomTime(time: DateType, id?: IdType): void;
   setCustomTimeTitle(title: string, id?: IdType): void;
-  setData(data: { groups?: DataGroupCollectionType; items?: DataItemCollectionType }): void;
+  setData(data: {
+    groups?: DataGroupCollectionType;
+    items?: DataItemCollectionType;
+  }): void;
   setGroups(groups?: DataGroupCollectionType): void;
   setItems(items: DataItemCollectionType): void;
   setOptions(options: TimelineOptions): void;
   setSelection(ids: IdType | IdType[]): void;
-  setWindow(start: DateType, end: DateType, options?: TimelineAnimationOptions): void;
+  setWindow(
+    start: DateType,
+    end: DateType,
+    options?: TimelineAnimationOptions
+  ): void;
 }
 
 export interface Graph2d {
@@ -601,7 +684,7 @@ export class Timeline {
   /**
    * Get the range of all the items as an object containing min date and max date
    */
-  getItemRange(): { min: Date, max: Date };
+  getItemRange(): { min: Date; max: Date };
 
   /**
    * Get an array with the ids of the currently selected items
@@ -621,7 +704,11 @@ export class Timeline {
   /**
    * Move the window such that given time is centered on screen.
    */
-  moveTo(time: DateType, options?: TimelineAnimationOptions, callback?: (properties?: any) => void): void;
+  moveTo(
+    time: DateType,
+    options?: TimelineAnimationOptions,
+    callback?: (properties?: any) => void
+  ): void;
 
   /**
    * Create an event listener. The callback function is invoked every time the event is triggered.
@@ -670,7 +757,10 @@ export class Timeline {
    * This is a convenience method for individually calling both setItems(items) and setGroups(groups).
    * Both items and groups can be an Array with Objects, a DataSet (offering 2 way data binding), or a DataView (offering 1 way data binding).
    */
-  setData(data: { groups?: DataGroupCollectionType; items?: DataItemCollectionType }): void;
+  setData(data: {
+    groups?: DataGroupCollectionType;
+    items?: DataItemCollectionType;
+  }): void;
 
   /**
    * Set a data set with groups for the Timeline.
@@ -692,7 +782,10 @@ export class Timeline {
    * Select one or multiple items by their id. The currently selected items will be unselected.
    * To unselect all selected items, call `setSelection([])`.
    */
-  setSelection(ids: IdType | IdType[], options?: { focus: boolean, animation: TimelineAnimationOptions }): void;
+  setSelection(
+    ids: IdType | IdType[],
+    options?: { focus: boolean; animation: TimelineAnimationOptions }
+  ): void;
 
   /**
    * Set the current visible window.
@@ -701,7 +794,12 @@ export class Timeline {
    * @param options Timeline animation options. See {@link TimelineAnimationOptions}
    * @param callback The callback function
    */
-  setWindow(start: DateType, end: DateType, options?: TimelineAnimationOptions, callback?: () => void): void;
+  setWindow(
+    start: DateType,
+    end: DateType,
+    options?: TimelineAnimationOptions,
+    callback?: () => void
+  ): void;
 
   /**
    * Toggle rollingMode.
@@ -714,7 +812,11 @@ export class Timeline {
    * @param options Timeline animation options. See {@link TimelineAnimationOptions}
    * @param callback The callback function
    */
-  zoomIn(percentage: number, options?: TimelineAnimationOptions, callback?: () => void): void;
+  zoomIn(
+    percentage: number,
+    options?: TimelineAnimationOptions,
+    callback?: () => void
+  ): void;
 
   /**
    * Zoom out the current visible window.
@@ -722,17 +824,23 @@ export class Timeline {
    * @param options Timeline animation options. See {@link TimelineAnimationOptions}
    * @param callback The callback function
    */
-  zoomOut(percentage: number, options?: TimelineAnimationOptions, callback?: () => void): void;
-}
+  zoomOut(
+    percentage: number,
+    options?: TimelineAnimationOptions,
+    callback?: () => void
+  ): void;
 
-export interface Timeline {
-  setGroups(groups?: TimelineGroup[]): void;
-  setItems(items?: TimelineItem[]): void;
-  getWindow(): TimelineWindow;
-  setWindow(start: any, date: any): void;
-  focus(selection: any): void;
-  on(event?: string, callback?: (properties: any) => void): void;
-  off(event: string, callback?: (properties?: any) => void): void;
+  /**
+   * Toggle following of custom time
+   *
+   * @param {string} id
+   */
+  toggleFollowCustomTime(id?: string): void;
+
+  /**
+   * Get the range associated with this Timeline
+   */
+  getRange(): TimelineRange;
 }
 
 export interface TimelineWindow {
@@ -797,17 +905,38 @@ export interface AnimationOptions {
   easingFunction: EasingFunction;
 }
 
+export class TimelineRange {
+  startRolling: () => void;
+  isFollowing: () => boolean;
+  isRolling: () => boolean;
+  followCustomTime: (id: string) => void;
+  setParent: (parent: Timeline) => void;
+  stopFollowingCustomTime: (id: string) => void;
+  stopRolling: () => void;
+  setRange: (
+    start: Date,
+    end: Date,
+    options: TimelineOptions,
+    callback?: () => void,
+    frameCallback?: () => void
+  ) => void;
+  getRange: () => { start: number; end: number };
+  zoom: (scale: number, center: number, delta: number, event: Event) => void;
+  move: (delta: number) => void;
+  moveTo: (moveTo: number) => void;
+}
+
 export type EasingFunction =
-  'linear' |
-  'easeInQuad' |
-  'easeOutQuad' |
-  'easeInOutQuad' |
-  'easeInCubic' |
-  'easeOutCubic' |
-  'easeInOutCubic' |
-  'easeInQuart' |
-  'easeOutQuart' |
-  'easeInOutQuart' |
-  'easeInQuint' |
-  'easeOutQuint' |
-  'easeInOutQuint';
+  | "linear"
+  | "easeInQuad"
+  | "easeOutQuad"
+  | "easeInOutQuad"
+  | "easeInCubic"
+  | "easeOutCubic"
+  | "easeInOutCubic"
+  | "easeInQuart"
+  | "easeOutQuart"
+  | "easeInOutQuart"
+  | "easeInQuint"
+  | "easeOutQuint"
+  | "easeInOutQuint";

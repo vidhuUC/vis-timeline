@@ -12,6 +12,8 @@ module.exports = {
 
   extends: "eslint:recommended",
 
+  ignorePatterns: ["**/*.d.ts"],
+
   // For the full list of rules, see: http://eslint.org/docs/rules/
   rules: {
     complexity: [2, 55],
@@ -24,12 +26,12 @@ module.exports = {
     //"no-console": ["warn", { allow: ["warn", "error"] }],
 
     "require-jsdoc": ["error", {
-        require: {
-          FunctionDeclaration: true,
-          MethodDefinition: true,
-          ClassDeclaration: true,
-          ArrowFunctionExpression: false
-        }
+      require: {
+        FunctionDeclaration: true,
+        MethodDefinition: true,
+        ClassDeclaration: true,
+        ArrowFunctionExpression: false
+      }
     }],
     "valid-jsdoc": [2, {
       requireReturnDescription: false,
